@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+/* ── Global keyframes used across multiple components ────────────────────── */
+
+/* ZimbabweMap — Task Card button pulses gold when all stops are done */
+@keyframes slowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(240, 192, 64, 0.55); }
+  50%       { box-shadow: 0 0 0 14px rgba(240, 192, 64, 0); }
+}
+
+/* FactCard — Zimbabwe journal stamp bounces in */
+@keyframes stampBounce {
+  0%   { transform: scale(0) rotate(-8deg); opacity: 0; }
+  55%  { transform: scale(1.14) rotate(3deg); opacity: 1; }
+  75%  { transform: scale(0.93) rotate(-1deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* FlightAnimation — ship drops toward Bulawayo */
+@keyframes shipDescend {
+  from { transform: translateX(-50%) translateY(-80px); }
+  to   { transform: translateX(-50%) translateY(200px); }
+}
+
+/* FlightAnimation — clouds float upward */
+@keyframes cloudRise {
+  0%   { transform: translateY(0px);    opacity: 0; }
+  15%  { opacity: 0.6; }
+  100% { transform: translateY(-130px); opacity: 0; }
+}

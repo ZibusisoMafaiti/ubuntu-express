@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { geoMercator, geoPath } from 'd3-geo'
 import { feature } from 'topojson-client'
 import type { Topology } from 'topojson-specification'
@@ -43,7 +42,7 @@ const AFRICA_COUNTRIES: Record<number, { name: string; slug: string; enabled: bo
   686: { name: 'Senegal',                  slug: 'senegal',       enabled: false },
   694: { name: 'Sierra Leone',             slug: 'sierra-leone',  enabled: false },
   706: { name: 'Somalia',                  slug: 'somalia',       enabled: false },
-  710: { name: 'South Africa',             slug: 'south-africa',  enabled: true  },
+  710: { name: 'South Africa',             slug: 'south-africa',  enabled: false },
   728: { name: 'South Sudan',              slug: 'south-sudan',   enabled: false },
   729: { name: 'Sudan',                    slug: 'sudan',         enabled: false },
   748: { name: 'Eswatini',                 slug: 'eswatini',      enabled: false },
@@ -51,7 +50,7 @@ const AFRICA_COUNTRIES: Record<number, { name: string; slug: string; enabled: bo
   768: { name: 'Togo',                     slug: 'togo',          enabled: false },
   788: { name: 'Tunisia',                  slug: 'tunisia',       enabled: false },
   800: { name: 'Uganda',                   slug: 'uganda',        enabled: false },
-  716: { name: 'Zimbabwe',                 slug: 'zimbabwe',      enabled: false },
+  716: { name: 'Zimbabwe',                 slug: 'zimbabwe',      enabled: true  },
 }
 
 const WIDTH = 600
@@ -72,8 +71,11 @@ interface CountryPath {
   d: string
 }
 
-export default function Map() {
-  const navigate = useNavigate()
+interface MapProps {
+  onCountryTap?: (slug: string) => void
+}
+
+export default function Map({ onCountryTap }: MapProps) {
   const [countryPaths, setCountryPaths] = useState<CountryPath[]>([])
   const [hovered, setHovered] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
@@ -107,7 +109,7 @@ export default function Map() {
         Choose Your Destination
       </h1>
       <p className="text-yellow-400 text-sm mb-6">
-        South Africa is ready — more countries coming soon
+        Zimbabwe is ready — tap to begin
       </p>
 
       {/* Country name tooltip */}
@@ -145,19 +147,13 @@ export default function Map() {
                 style={{ cursor: enabled ? 'pointer' : 'default', transition: 'fill 0.15s ease' }}
                 onMouseEnter={() => setHovered(name)}
                 onMouseLeave={() => setHovered(null)}
-                onClick={() => enabled && navigate(`/episode/${slug}`)}
+                onClick={() => enabled && onCountryTap?.(slug)}
               />
             ))}
           </svg>
         </div>
       )}
 
-      <button
-        onClick={() => navigate('/')}
-        className="mt-4 text-yellow-400 underline text-sm"
-      >
-        ← Back to Home
-      </button>
     </div>
   )
 }
