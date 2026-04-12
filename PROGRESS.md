@@ -51,6 +51,31 @@ Document what you find in LEARNING.md before building anything.
 
 ---
 
+## Session 3 — All 17 Tasks Complete ✓
+
+Built with Claude Code. Final build: 0 TypeScript errors, 309 kB JS (95 kB gzipped).
+
+All source files in place. App runs end-to-end through the full episode flow.
+Audio plays silently when MP3 files are absent — no errors, no warnings.
+
+Changes from spec:
+- `'transition-animation'` added to the Screen union type (not in original spec).
+  Needed as a distinct screen state between landing map and cold open.
+- Component named `LanguageStopScreen` (not `LanguageStop`) to avoid name
+  collision when importing alongside the `LanguageStop` TypeScript type in App.tsx.
+- React Router v7 removed entirely. BrowserRouter replaced with useState<Screen>
+  routing in App.tsx. Map.tsx updated to use onCountryTap prop instead of useNavigate.
+- Howler.js was not in the original package.json despite being listed as "in the
+  tech stack". Installed as part of Task 4: `npm install howler @types/howler`.
+
+What still needs the developer's action before going live:
+1. Record narration audio → clone voice via ElevenLabs → drop MP3s into
+   public/audio/episode-1/ (app handles missing files silently)
+2. Test on physical device at 375px, 390px, 360px viewports
+3. Push to GitHub → Vercel auto-deploys
+
+---
+
 ## The Application
 
 Name: The Ubuntu Express
@@ -176,7 +201,7 @@ has been updated with the documentation for that component.
 
 ---
 
-### TASK 1 — Read the existing codebase
+### TASK 1 — Read the existing codebase ✓ DONE
 
 Run:
 ```bash
@@ -192,7 +217,7 @@ any new code.
 
 ---
 
-### TASK 2 — TypeScript interfaces
+### TASK 2 — TypeScript interfaces ✓ DONE
 
 File: src/types/index.ts
 
@@ -263,7 +288,7 @@ interface AppState {
 
 ---
 
-### TASK 3 — Transition Animation Component
+### TASK 3 — Transition Animation Component ✓ DONE
 
 File: src/components/TransitionAnimation.tsx
 
@@ -285,7 +310,7 @@ Requirements:
 
 ---
 
-### TASK 4 — Story Panel Viewer Component
+### TASK 4 — Story Panel Viewer Component ✓ DONE
 
 File: src/components/StoryPanel.tsx
 
@@ -336,7 +361,7 @@ first, then tap the main screen to continue.
 
 ---
 
-### TASK 5 — Cold Open Content
+### TASK 5 — Cold Open Content ✓ DONE
 
 File: src/data/coldOpen.ts
 
@@ -356,7 +381,7 @@ that calls onComplete.
 
 ---
 
-### TASK 6 — Boarding Content and Screen
+### TASK 6 — Boarding Content and Screen ✓ DONE
 
 File: src/data/boarding.ts and src/components/BoardingScreen.tsx
 
@@ -370,7 +395,7 @@ After all 4 are tapped, panels 3-4 play and the "Buckle up" button appears.
 
 ---
 
-### TASK 7 — Flight Animation Component
+### TASK 7 — Flight Animation Component ✓ DONE
 
 File: src/components/FlightAnimation.tsx
 
@@ -389,7 +414,7 @@ This makes the Bulawayo landing feel real before Sbu starts talking.
 
 ---
 
-### TASK 8 — Zimbabwe Episode Map Component
+### TASK 8 — Zimbabwe Episode Map Component ✓ DONE
 
 File: src/components/ZimbabweMap.tsx
 
@@ -416,7 +441,7 @@ Requirements:
 
 ---
 
-### TASK 9 — Language Stop Component
+### TASK 9 — Language Stop Component ✓ DONE
 
 File: src/components/LanguageStop.tsx
 
@@ -466,7 +491,7 @@ Phase 5 — complete:
 
 ---
 
-### TASK 10 — Language Stop Data
+### TASK 10 — Language Stop Data ✓ DONE
 
 File: src/data/languageStops.ts
 
@@ -509,7 +534,7 @@ addressesCamouflage: true, addressesAnchoring: false
 
 ---
 
-### TASK 11 — STEM Challenge Component
+### TASK 11 — STEM Challenge Component ✓ DONE
 
 File: src/components/StemChallenge.tsx
 
@@ -542,7 +567,7 @@ Full hint text in EPISODE1_SCRIPT.md.
 
 ---
 
-### TASK 12 — Photo Capture Component
+### TASK 12 — Photo Capture Component ✓ DONE
 
 File: src/components/PhotoCapture.tsx
 
@@ -568,7 +593,7 @@ Photo capture button:
 
 ---
 
-### TASK 13 — Delivery Scene Component
+### TASK 13 — Delivery Scene Component ✓ DONE
 
 File: src/components/DeliveryScene.tsx
 
@@ -607,7 +632,7 @@ Quiet moment panel:
 
 ---
 
-### TASK 14 — Return Flight and Landing
+### TASK 14 — Return Flight and Landing ✓ DONE
 
 Files: src/data/returnFlight.ts and (reuse StoryPanel component)
 
@@ -620,7 +645,7 @@ The porch scene. The close ("beauty sleep").
 
 ---
 
-### TASK 15 — Fact Card Component
+### TASK 15 — Fact Card Component ✓ DONE
 
 File: src/components/FactCard.tsx
 
@@ -633,7 +658,7 @@ then a stamp sound, then a coloured fill settles. CSS keyframe animation.
 
 ---
 
-### TASK 16 — App.tsx Routing and State
+### TASK 16 — App.tsx Routing and State ✓ DONE
 
 No Redux. No Context API. Props passed directly. Keep simple.
 
@@ -657,7 +682,7 @@ landing → [tap Zimbabwe] → transition-animation → cold-open
 
 ---
 
-### TASK 17 — Mobile Audit and Deploy
+### TASK 17 — Mobile Audit and Deploy ✓ DONE (code side)
 
 After all components are built:
 1. Test every screen at 375px viewport width (iPhone SE)
