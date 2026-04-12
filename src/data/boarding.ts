@@ -28,7 +28,7 @@ export const FABRIC_AUDIO_URL = '/audio/episode-1/boarding-03.mp3'
 export const boardingPanels: StoryPanelData[] = [
   // ── Panel 1 ────────────────────────────────────────────────────────────────
   {
-    background: '#C1692F',
+    background: '/images/episode-1/boarding-01.jpg',
     text: 'The Ubuntu Express was unlike anything Siya had ever seen.',
     narration:
       'Walking up the ramp, Siya saw that the Ubuntu Express was unlike anything she had ever seen — the body of a rocket, wings like an aeroplane, wheels like the biggest truck in the world. And on the outside, in big bold letters: UBUNTU EXPRESS.',
@@ -37,7 +37,7 @@ export const boardingPanels: StoryPanelData[] = [
 
   // ── Panel 2 ────────────────────────────────────────────────────────────────
   {
-    background: '#1B3A2E',
+    background: '/images/episode-1/boarding-02.jpg',
     text: 'Inside, the seats were covered in the most beautiful fabrics.',
     narration:
       'Inside, the seats were covered in the most beautiful fabrics Siya had ever seen — rich patterns in gold and red and indigo and green. Siya ran her hand along the nearest seat. The cloth was smooth and warm.',
@@ -49,7 +49,7 @@ export const boardingPanels: StoryPanelData[] = [
   // Narration text is shown after all 4 seats are tapped.
   // Audio is played manually by BoardingScreen — NOT by StoryPanel.
   {
-    background: '#1B3A2E',
+    background: '/images/episode-1/boarding-03.jpg',
     text: 'Tap each seat to find out where its cloth comes from.',
     narration:
       '"Kuba cloth from Congo. Shweshwe from South Africa. Kente from Ghana. Adire from Nigeria. Every seat on this ship comes from somewhere on the continent." Siya got the window seat — right in the middle.',
@@ -58,7 +58,7 @@ export const boardingPanels: StoryPanelData[] = [
 
   // ── Panel 4 ────────────────────────────────────────────────────────────────
   {
-    background: '#0A0E1A',
+    background: '/images/episode-1/boarding-04.jpg',
     text: '"Seatbelts on for takeoff," said Mama Ndlovu on the speaker.',
     narration:
       'The seatbelt clicked on by itself. Then Mama Ndlovu\'s voice came over the speaker — deep and calm and certain. She said one word in Ndebele. Then in English: "Hold on. We are going home."',

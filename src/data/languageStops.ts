@@ -17,7 +17,7 @@ export const languageStops: LanguageStop[] = [
     thanks: 'Ndalumba',
     thanksMeaning: 'Thank you',
     thanksPronunciation: 'n-dah-LOOM-bah',
-    backgroundColour: '#1A2A4A',
+    backgroundColour: '/images/episode-1/vic-falls-scene.jpg',
     pinColour: '#D85A30',
     localChild: {
       name: 'Sitwala',
@@ -45,7 +45,7 @@ export const languageStops: LanguageStop[] = [
     thanks: 'Ndatenda',
     thanksMeaning: 'Thank you',
     thanksPronunciation: 'n-dah-TEN-dah',
-    backgroundColour: '#3A2010',
+    backgroundColour: '/images/episode-1/khami-scene.jpg',
     pinColour: '#BA7517',
     localChild: {
       name: 'Thandiwe',
@@ -73,7 +73,7 @@ export const languageStops: LanguageStop[] = [
     thanks: 'Ngiyabonga',
     thanksMeaning: 'I am grateful',
     thanksPronunciation: 'n-gee-yah-BON-gah',
-    backgroundColour: '#1E1A30',
+    backgroundColour: '/images/episode-1/matobo-scene.jpg',
     pinColour: '#534AB7',
     localChild: {
       name: 'Nokukhanya',
@@ -103,7 +103,7 @@ export const languageStops: LanguageStop[] = [
     thanks: 'Ndatenda',
     thanksMeaning: 'Thank you',
     thanksPronunciation: 'n-dah-TEN-dah',
-    backgroundColour: '#1A2A1A',
+    backgroundColour: '/images/episode-1/great-zim-scene.jpg',
     pinColour: '#1D9E75',
     localChild: {
       name: 'Chiedza',

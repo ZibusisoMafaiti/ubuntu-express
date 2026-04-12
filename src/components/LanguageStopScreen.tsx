@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Howl } from 'howler'
 import type { LanguageStop } from '../types'
 
@@ -57,6 +57,13 @@ function playAudio(url: string | undefined): Howl | null {
   const sound = new Howl({ src: [url] })
   sound.play()
   return sound
+}
+
+// '#...' → solid colour. Anything else → treated as an image URL.
+function stopBg(value: string): React.CSSProperties {
+  return value.startsWith('#')
+    ? { background: value }
+    : { background: `url(${value}) center / cover no-repeat` }
 }
 
 export default function LanguageStopScreen({ stop, onComplete }: Props) {
@@ -164,7 +171,7 @@ export default function LanguageStopScreen({ stop, onComplete }: Props) {
       <div
         className="fixed inset-0 flex flex-col items-center justify-center px-5"
         style={{
-          background: flashing ? '#1A4010' : stop.backgroundColour,
+          ...(flashing ? { background: '#1A4010' } : stopBg(stop.backgroundColour)),
           transition: 'background 200ms ease',
         }}
       >
@@ -215,7 +222,7 @@ export default function LanguageStopScreen({ stop, onComplete }: Props) {
     return (
       <div
         className="fixed inset-0 flex flex-col overflow-y-auto"
-        style={{ background: stop.backgroundColour }}
+        style={stopBg(stop.backgroundColour)}
       >
         <div className="px-5 pt-10 pb-6">
           {/* Child avatar + speech bubble */}
@@ -294,7 +301,7 @@ export default function LanguageStopScreen({ stop, onComplete }: Props) {
     return (
       <div
         className="fixed inset-0 flex flex-col items-center justify-center px-5"
-        style={{ background: stop.backgroundColour }}
+        style={stopBg(stop.backgroundColour)}
       >
         <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', marginBottom: 8 }}>
           Now say thank you in {stop.language}.
