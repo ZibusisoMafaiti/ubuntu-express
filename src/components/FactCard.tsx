@@ -44,6 +44,19 @@ export default function FactCard({ onComplete }: Props) {
       style={{ background: '#F5E8D0' }}
     >
       <div className="px-5 pt-10 pb-10">
+        {/* Pangolin scales header image */}
+        <img
+          src="/images/episode-1/pangolin-scales.jpg"
+          alt="Pangolin scales"
+          style={{
+            width: '100%',
+            borderRadius: 16,
+            objectFit: 'cover',
+            maxHeight: 200,
+            marginBottom: 20,
+          }}
+        />
+
         {/* Heading */}
         <h1 style={{ fontSize: 22, fontWeight: 700, color: '#2A1A06', marginBottom: 4 }}>
           Pangolin Facts

@@ -110,7 +110,11 @@ export default function DeliveryScene({ photoUrl, onComplete }: Props) {
     return (
       <div
         className="fixed inset-0 flex flex-col"
-        style={{ background: '#1A3A2A' }}
+        style={{
+          backgroundImage: 'url(/images/episode-1/gonarezhou-landscape.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
         <div className="flex-1 flex flex-col justify-end px-5 pb-8">
           {/* Delivery scene content */}
@@ -127,22 +131,18 @@ export default function DeliveryScene({ photoUrl, onComplete }: Props) {
           </p>
 
           <div className="flex items-end gap-6 mb-8">
-            {/* Lulu avatar placeholder */}
-            <div
-              className="rounded-full flex items-center justify-center flex-shrink-0"
+            <img
+              src="/images/episode-1/delivery-lulu.jpg"
+              alt="Lulu"
               style={{
                 width: 70,
                 height: 70,
-                background: '#2A5A3A',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                flexShrink: 0,
                 border: '2px solid rgba(255,255,255,0.2)',
-                fontSize: 11,
-                color: 'rgba(255,255,255,0.5)',
-                textAlign: 'center',
-                lineHeight: 1.3,
               }}
-            >
-              Lulu
-            </div>
+            />
 
             <Polaroid src={photoUrl} caption="Tonde's new home — built by you." />
           </div>
@@ -173,7 +173,11 @@ export default function DeliveryScene({ photoUrl, onComplete }: Props) {
     return (
       <div
         className="fixed inset-0 flex flex-col"
-        style={{ background: '#1A2E3A' }}
+        style={{
+          backgroundImage: 'url(/images/episode-1/hwange-landscape.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
         <div className="flex-1 flex flex-col justify-end px-5 pb-8">
           <p
@@ -189,25 +193,33 @@ export default function DeliveryScene({ photoUrl, onComplete }: Props) {
           </p>
 
           <div className="flex items-end gap-6 mb-8">
-            <div
-              className="rounded-full flex items-center justify-center flex-shrink-0"
+            <img
+              src="/images/episode-1/delivery-lulu.jpg"
+              alt="Lulu"
               style={{
                 width: 70,
                 height: 70,
-                background: '#1A3A4A',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                flexShrink: 0,
                 border: '2px solid rgba(255,255,255,0.2)',
-                fontSize: 11,
-                color: 'rgba(255,255,255,0.5)',
-                textAlign: 'center',
-                lineHeight: 1.3,
               }}
-            >
-              Lulu
-            </div>
+            />
 
             <Polaroid src={photoUrl} caption="Nothando and her young one — safe inside." />
           </div>
 
+          <img
+            src="/images/episode-1/nothando-pair.jpg"
+            alt="Nothando and her young one"
+            style={{
+              width: '100%',
+              borderRadius: 12,
+              objectFit: 'cover',
+              maxHeight: 180,
+              marginBottom: 16,
+            }}
+          />
           <p style={{ fontSize: 18, color: 'white', lineHeight: 1.55, marginBottom: 6 }}>
             Then they flew to Hwange — to Nothando and her young one.
           </p>

@@ -8,14 +8,14 @@ import type { StoryPanelData } from '../types'
 
 const PRE_DESCENT: StoryPanelData[] = [
   {
-    background: '#0A0E1A',
+    background: '/images/episode-1/flight-calgary.jpg',
     text: 'Below them, Calgary disappeared into the dark.',
     narration:
       'Below the ship, the lights of Calgary grew smaller and smaller, until they looked like stars on the ground. Siya pressed her face against the window.',
     audioUrl: '/audio/episode-1/flight-01.mp3',
   },
   {
-    background: '#0A0E1A',
+    background: '/images/episode-1/flight-ocean.jpg',
     text: '"It is almost midnight here. But Zimbabwe is already waking up."',
     narration:
       '"It is almost midnight here in Calgary," Mama Ndlovu said. "But in Zimbabwe, the sun is already rising. We are flying toward it." Siya watched the clock on the panel change — 11:58 PM, then 1:00, then 4:00 — as if time itself was moving faster than she was.',
@@ -23,7 +23,7 @@ const PRE_DESCENT: StoryPanelData[] = [
     audioUrl: '/audio/episode-1/flight-02.mp3',
   },
   {
-    background: '#C1692F',
+    background: '/images/episode-1/flight-sunrise.jpg',
     text: "The ship began to descend — and a smile spread across Sbu's face.",
     narration:
       "Then the Ubuntu Express began to descend — not toward Zimbabwe in general, but toward a specific place. And Siya looked at her father and saw something she had never quite seen before. A smile that was also something else. Something closer to home.",
@@ -33,7 +33,7 @@ const PRE_DESCENT: StoryPanelData[] = [
 
 const POST_DESCENT: StoryPanelData[] = [
   {
-    background: '#D4A017',
+    background: '/images/episode-1/flight-bulawayo.jpg',
     text: '"Do you remember this?" Mama Ndlovu asked.',
     narration:
       'The ship landed gently on a dusty soccer field in Entumbane, in the city of Bulawayo. Mama Ndlovu\'s voice came over the speaker: "Do you remember this place, Sibusiso?"',
@@ -41,7 +41,7 @@ const POST_DESCENT: StoryPanelData[] = [
     audioUrl: '/audio/episode-1/flight-04.mp3',
   },
   {
-    background: '#D4A017',
+    background: '/images/episode-1/flight-bulawayo.jpg',
     text: '"How could I forget? This is where it all began."',
     narration:
       'Sbu laughed — a real, full, surprised laugh. "How could I forget? This is where it all began." He looked at Siya. "Sit down. I am going to tell you a story."',
@@ -49,7 +49,7 @@ const POST_DESCENT: StoryPanelData[] = [
     audioUrl: '/audio/episode-1/flight-05.mp3',
   },
   {
-    background: '#2D4A22',
+    background: '/images/episode-1/flight-bulawayo.jpg',
     text: '"We were playing soccer — Bheki, Rumbi, Kgomotso, and me."',
     narration:
       '"We were playing soccer right here — uBheki, uRumbi, uKgomotso, and me. I kicked the ball too hard. It went into the bushes. So I ran to get it. And that is when I found her."',
@@ -57,7 +57,7 @@ const POST_DESCENT: StoryPanelData[] = [
     audioUrl: '/audio/episode-1/flight-06.mp3',
   },
   {
-    background: '#2D4A22',
+    background: '/images/episode-1/flight-bulawayo.jpg',
     text: 'A bird. Hurt. Lying very still in the long grass.',
     narration:
       'A bird — lying very still in the long grass. A crowned crane with a broken wing. She was hurt and she could not fly and she was alone. I shouted to the others and they all came running.',
@@ -65,7 +65,7 @@ const POST_DESCENT: StoryPanelData[] = [
     audioUrl: '/audio/episode-1/flight-07.mp3',
   },
   {
-    background: '#1B3A2E',
+    background: '/images/episode-1/flight-bulawayo.jpg',
     text: 'They bandaged her wing. They brought her their lunch. They came back every day.',
     narration:
       'We found a stick to keep her wing in place and wrapped it the best we could. Every day after school we came back with whatever food we had from our lunch boxes. Bread, mostly. She got stronger. And stronger. And one day, she flew away.',
@@ -73,14 +73,14 @@ const POST_DESCENT: StoryPanelData[] = [
     audioUrl: '/audio/episode-1/flight-08.mp3',
   },
   {
-    background: '#1B3A2E',
+    background: '/images/episode-1/flight-bulawayo.jpg',
     text: "They didn't know it then — but that bird was Kesi.",
     narration:
       "What we didn't know — not then — was that this bird was Kesi. And Kesi was not just any bird. She had been sent to Bulawayo by the Ubuntu Express, looking for children with the right qualities. She got hurt in an accident along the way.",
     audioUrl: '/audio/episode-1/flight-09.mp3',
   },
   {
-    background: '#2A1A06',
+    background: '/images/episode-1/flight-makokoba.jpg',
     text: 'A few days later, there was an elephant in the living room.',
     narration:
       'A few days later, I came home to our house in Makokoba and found my mother and father sitting very still in the living room, speaking with an elephant. Mama Ndlovu had come to ask my parents if I could join the Ubuntu Express.',
@@ -88,7 +88,7 @@ const POST_DESCENT: StoryPanelData[] = [
     audioUrl: '/audio/episode-1/flight-10.mp3',
   },
   {
-    background: '#0F1E2A',
+    background: '/images/episode-1/flight-makokoba.jpg',
     text: '"The reason they chose us was kindness."',
     narration:
       '"The reason they chose us," Sbu said quietly, "was not because we were the smartest or the bravest. It was because we had been kind to a bird in its time of need. That is all. Umuntu ngumuntu ngabantu — a person is a person because of other people. That is the Ubuntu way."',
@@ -96,14 +96,14 @@ const POST_DESCENT: StoryPanelData[] = [
     audioUrl: '/audio/episode-1/flight-11.mp3',
   },
   {
-    background: '#1B3A2E',
+    background: '/images/episode-1/flight-bulawayo.jpg',
     text: 'At the same time, Baba Kobe and Zuri were visiting the other boys.',
     narration:
       'At the same time I was meeting Mama Ndlovu, Baba Kobe was at Kgomotso\'s house. And Zuri was at Rumbi\'s. All of our parents were scared at first — but Mama Ndlovu has a way of calming anxious people. And they all said yes.',
     audioUrl: '/audio/episode-1/flight-12.mp3',
   },
   {
-    background: '#0A0E1A',
+    background: '/images/episode-1/flight-calgary.jpg',
     text: 'The Ubuntu Express lifted off and continued toward Zimbabwe.',
     narration:
       'The Ubuntu Express rose up from the soccer field in Entumbane. Siya was quiet. She had a lot to think about. Her dad had always just been her dad. She had not known he was also this.',

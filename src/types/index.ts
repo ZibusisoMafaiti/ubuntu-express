@@ -43,6 +43,7 @@ export interface LanguageStop {
     initials: string
     idea: string
     avatarColour: string
+    portraitUrl?: string
   }
   animalWisdom: {
     animal: string

@@ -102,18 +102,32 @@ export default function LanguageStopScreen({ stop, onComplete }: Props) {
         className="fixed inset-0 flex flex-col"
         style={{ background: '#0A0E1A' }}
       >
-        {/* Kesi label */}
-        <div className="px-5 pt-10">
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', letterSpacing: 1.5, textTransform: 'uppercase' }}>
-            Kesi says
-          </p>
-          {/* Language badge */}
-          <span
-            className="inline-block mt-2 px-3 py-1 rounded-full"
-            style={{ background: stop.pinColour, fontSize: 13, color: 'white', fontWeight: 600 }}
-          >
-            {stop.language}
-          </span>
+        {/* Kesi header */}
+        <div className="px-5 pt-10 flex items-center gap-3">
+          <img
+            src="/images/episode-1/kesi-portrait.jpg"
+            alt="Kesi"
+            style={{
+              width: 52,
+              height: 52,
+              borderRadius: '50%',
+              objectFit: 'cover',
+              flexShrink: 0,
+              border: '2px solid rgba(255,255,255,0.25)',
+            }}
+          />
+          <div>
+            <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', letterSpacing: 1.5, textTransform: 'uppercase' }}>
+              Kesi says
+            </p>
+            {/* Language badge */}
+            <span
+              className="inline-block mt-1 px-3 py-1 rounded-full"
+              style={{ background: stop.pinColour, fontSize: 13, color: 'white', fontWeight: 600 }}
+            >
+              {stop.language}
+            </span>
+          </div>
         </div>
 
         {/* Word pair */}
@@ -227,18 +241,33 @@ export default function LanguageStopScreen({ stop, onComplete }: Props) {
         <div className="px-5 pt-10 pb-6">
           {/* Child avatar + speech bubble */}
           <div className="flex items-start gap-3 mb-5">
-            <div
-              className="rounded-full flex-shrink-0 flex items-center justify-center font-bold"
-              style={{
-                width: 52,
-                height: 52,
-                background: stop.localChild.avatarColour,
-                color: '#2A1A06',
-                fontSize: 16,
-              }}
-            >
-              {stop.localChild.initials}
-            </div>
+            {stop.localChild.portraitUrl ? (
+              <img
+                src={stop.localChild.portraitUrl}
+                alt={stop.localChild.name}
+                style={{
+                  width: 52,
+                  height: 52,
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  flexShrink: 0,
+                  border: '2px solid rgba(255,255,255,0.2)',
+                }}
+              />
+            ) : (
+              <div
+                className="rounded-full flex-shrink-0 flex items-center justify-center font-bold"
+                style={{
+                  width: 52,
+                  height: 52,
+                  background: stop.localChild.avatarColour,
+                  color: '#2A1A06',
+                  fontSize: 16,
+                }}
+              >
+                {stop.localChild.initials}
+              </div>
+            )}
 
             {/* Speech bubble */}
             <div

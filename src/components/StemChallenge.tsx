@@ -91,6 +91,17 @@ export default function StemChallenge({ collectedIdeas, onComplete }: Props) {
         style={{ background: '#1A2E1A' }}
       >
         <div className="pt-10 pb-6">
+          <img
+            src="/images/episode-1/tonde-walking.jpg"
+            alt="Tonde the pangolin"
+            style={{
+              width: '100%',
+              borderRadius: 16,
+              objectFit: 'cover',
+              maxHeight: 220,
+              marginBottom: 16,
+            }}
+          />
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', letterSpacing: 1.5, textTransform: 'uppercase' }}>
             Meet Tonde
           </p>

@@ -24,6 +24,7 @@ export const languageStops: LanguageStop[] = [
       initials: 'Si',
       idea: 'Weave thorny acacia branches around the entrance. Poachers cannot reach through without getting hurt — and from the outside, it looks exactly like natural bush.',
       avatarColour: '#E1F5EE',
+      portraitUrl: '/images/episode-1/sitwala-portrait.jpg',
     },
     animalWisdom: {
       animal: 'Mama Ndlovu',
@@ -52,6 +53,7 @@ export const languageStops: LanguageStop[] = [
       initials: 'Th',
       idea: 'Use dry-stone technique. Stack flat stones carefully — no cement, just good fitting. The walls become part of the landscape. And they last for hundreds of years — just look around you.',
       avatarColour: '#FAEEDA',
+      portraitUrl: '/images/episode-1/thandiwe-portrait.jpg',
     },
     animalWisdom: {
       animal: 'Jabari',
@@ -80,6 +82,7 @@ export const languageStops: LanguageStop[] = [
       initials: 'No',
       idea: 'Use the shadow underneath a balancing rock. Pangolins are small — the crevices are perfect. And no human being can move a boulder. No poacher can reach inside. This rock has not moved in a million years.',
       avatarColour: '#EEEDFE',
+      portraitUrl: '/images/episode-1/nokukhanya-portrait.jpg',
     },
     animalWisdom: {
       animal: 'Baba Kobe',
@@ -110,6 +113,7 @@ export const languageStops: LanguageStop[] = [
       initials: 'Ch',
       idea: 'Dig it into the shape of a termite mound. Pangolins smell like the earth anyway. And the ochre colour matches the soil perfectly. From the outside, it will be invisible.',
       avatarColour: '#E1F5EE',
+      portraitUrl: '/images/episode-1/chiedza-portrait.jpg',
     },
     animalWisdom: {
       animal: 'Zuri',

@@ -50,7 +50,11 @@ export default function ZimbabweMap({ completedStops, onSelectStop, onOpenChalle
   return (
     <div
       className="fixed inset-0 flex flex-col"
-      style={{ background: '#F5E8D0' }}
+      style={{
+        backgroundImage: 'url(/images/episode-1/zimbabwe-map.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
       {/* ── Header ───────────────────────────────────────────────────── */}
       <div className="px-5 pt-8 pb-3">
