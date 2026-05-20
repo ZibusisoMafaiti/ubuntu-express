@@ -198,7 +198,7 @@ export default function ChapterPlayer({ screens, onComplete }: ChapterPlayerProp
       display: 'block',
       width: '100%',
       height: '100%',
-      objectFit: 'cover',
+      objectFit: 'contain',
       objectPosition: 'center top',
     }}
   />
