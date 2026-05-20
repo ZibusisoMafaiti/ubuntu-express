@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import type { Screen, LanguageStop } from './types'
 
+// ── New Stage 1 components ────────────────────────────────────────────────
+import HomeScreen    from './components/Homescreen'
+import ChapterPlayer from './components/ChapterPlayer'
+import { chapter1Screens } from './data/chapter1Screens'
+
+// ── Existing Stage 2+ components (untouched) ─────────────────────────────
 import Map                  from './pages/Map'
 import TransitionAnimation  from './components/TransitionAnimation'
 import StoryPanel           from './components/StoryPanel'
@@ -17,11 +23,11 @@ import { coldOpenPanels }      from './data/coldOpen'
 import { returnFlightPanels }  from './data/returnFlight'
 
 export default function App() {
-  const [screen, setScreen]               = useState<Screen>('landing')
+  const [screen, setScreen]                 = useState<Screen>('home')
   const [completedStops, setCompletedStops] = useState<string[]>([])
   const [collectedIdeas, setCollectedIdeas] = useState<string[]>([])
-  const [photoUrl, setPhotoUrl]           = useState<string | null>(null)
-  const [currentStop, setCurrentStop]     = useState<LanguageStop | null>(null)
+  const [photoUrl, setPhotoUrl]             = useState<string | null>(null)
+  const [currentStop, setCurrentStop]       = useState<LanguageStop | null>(null)
 
   function handleCountryTap(slug: string) {
     if (slug === 'zimbabwe') setScreen('transition-animation')
@@ -47,6 +53,23 @@ export default function App() {
   }
 
   // ── Screen router ─────────────────────────────────────────────────────────
+
+  // Stage 1: Opening screen
+  if (screen === 'home') {
+    return <HomeScreen onBegin={() => setScreen('chapter-one')} />
+  }
+
+  // Stage 1: Chapter 1 narrated book
+  if (screen === 'chapter-one') {
+    return (
+      <ChapterPlayer
+        screens={chapter1Screens}
+        onComplete={() => setScreen('landing')}
+      />
+    )
+  }
+
+  // ── Everything below is Stage 2+ (existing flow, untouched) ──────────────
 
   if (screen === 'landing') {
     return (
@@ -138,18 +161,16 @@ export default function App() {
     return (
       <FactCard
         onComplete={() => {
-          // Reset state and return to the landing map
           setCompletedStops([])
           setCollectedIdeas([])
           setPhotoUrl(null)
           setCurrentStop(null)
-          setScreen('landing')
+          setScreen('home')   // ← returns to new home, not old landing
         }}
       />
     )
   }
 
-  // Fallback — should not be reached in normal flow
   return (
     <div
       className="fixed inset-0 flex items-center justify-center"

@@ -1,5 +1,7 @@
 // All screens in the episode
 export type Screen =
+  | 'home'           
+  | 'chapter-one' 
   | 'landing'
   | 'transition-animation'
   | 'cold-open'
