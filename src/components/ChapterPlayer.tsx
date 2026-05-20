@@ -194,7 +194,25 @@ export default function ChapterPlayer({ screens, onComplete }: ChapterPlayerProp
         /* ── STORY SCREEN ── */
         <>
           {/* Illustration */}
-          <div style={illustrationStyle} />
+         <div style={{
+  position: 'absolute',
+  inset: 0,
+  background: current.illustrationBg,
+  opacity: isTransitioning ? 0 : 1,
+  transition: 'opacity 0.4s ease',
+}}>
+  <img
+    src={`/illustrations/${current.illustrationKey}.jpg`}
+    alt=""
+    style={{
+      display: 'block',
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      objectPosition: 'center top',
+    }}
+  />
+</div>
 
           {/* Gradient overlay — ensures caption is always readable */}
           <div style={{
