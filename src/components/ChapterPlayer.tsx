@@ -107,9 +107,10 @@ export default function ChapterPlayer({ screens, onComplete }: ChapterPlayerProp
     inset: 0,
     background: current.illustrationBg,
     backgroundImage: `url(/illustrations/${current.illustrationKey}.jpg)`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundSize: 'contain',
+    backgroundPosition: 'center top',
     transition: 'opacity 0.4s ease',
+    backgroundColor: current.illustrationBg,
     opacity: isTransitioning ? 0 : 1,
   }
 
