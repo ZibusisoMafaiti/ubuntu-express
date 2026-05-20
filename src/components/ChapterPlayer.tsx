@@ -102,17 +102,7 @@ export default function ChapterPlayer({ screens, onComplete }: ChapterPlayerProp
   }
 
   // ── Illustration background — real art or placeholder ────────────────────
-  const illustrationStyle: React.CSSProperties = {
-    position: 'absolute',
-    inset: 0,
-    background: current.illustrationBg,
-    backgroundImage: `url(/illustrations/${current.illustrationKey}.jpg)`,
-    backgroundSize: 'contain',
-    backgroundPosition: 'center top',
-    transition: 'opacity 0.4s ease',
-    backgroundColor: current.illustrationBg,
-    opacity: isTransitioning ? 0 : 1,
-  }
+  
 
   const isNarratorOut = current.narratorType === 'narrator-out'
 
